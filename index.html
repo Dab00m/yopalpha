@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<div data-role="page" id="home">
+		<div data-role="header" data-position="fixed">
+			<h1>Yo primero</h1>
+			<a href="#one-menu" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+
+		</div>
+		<div data-role="panel" data-position="left" data-display="overlay" data-theme="a" id="one-menu">
+			<div data-role="content">
+				<ul class="ui-listview ui-alt-icon ui-nodisc-icon" data-role="listview">
+					<li><a href="#colores" data-rel="close" data-ajax="false">Colores</a></li>
+					<li><a href="#numeros" data-rel="close" data-ajax="false">Numero</a></li>
+					<li><a href="#dados" data-rel="close" data-ajax="false">Dados</a></li>
+					<li><a href="#jugadores" data-rel="close" data-ajax="false">Jugadores</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+
+		</div>
+	</div>
+	<div data-role="page" id="colores">
+		<div data-role="header" data-position="fixed">
+			<a href="#home" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-home ui-nodisc-icon ui-alt-icon ui-btn-left" data-icon="home">Menu</a>
+			<h1>Meeples de Colores</h1>
+		</div>
+		<div role="main" class="ui-content" data-role="content"> 
+			<div id="form">
+				<form id="color" class="ui-body ui-body-a ui-corner-all" data-ajax="false">
+					<fieldset data-role="controlgroup">
+						<legend>Choose as many colors as you'd need:</legend>
+						<label for="red"><img src="Red.png"></label>
+						<input type="checkbox" name="favcolor" id="red" value="Red">
+						<label for="green"><img src="Green.png"></label>
+						<input type="checkbox" name="favcolor" id="green" value="Green">
+						<label for="blue"><img src="Blue.png"></label>
+						<input type="checkbox" name="favcolor" id="blue" value="Blue">	
+						<label for="orange"><img src="Orange.png"></label>
+						<input type="checkbox" name="favcolor" id="orange" value="Orange">	
+						<label for="pink"><img src="Pink.png"></label>
+						<input type="checkbox" name="favcolor" id="pink" value="Pink">	
+						<label for="purple"><img src="Purple.png"></label>
+						<input type="checkbox" name="favcolor" id="purple" value="Purple">	
+						<label for="yellow"><img src="Yellow.png"></label>
+						<input type="checkbox" name="favcolor" id="yellow" value="Yellow">	
+						<input type="button" data-theme="b" name="submit" id="submit" value="Submit">
+					</fieldset>
+				</form>
+			</div>
+			<div id="result" class="ui-content" style="display: none;">
+				<span class="ui-btn ui-icon-back" id="again">Go Back</span>
+				<ul class="ui-content" data-role="listview" id="ulresult" data-inset="true">
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="numeros">
+		<div data-role="header" data-position="fixed">
+			<a href="#home" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-home ui-nodisc-icon ui-alt-icon ui-btn-left" data-icon="home">Menu</a>
+			<h1>Numeros</h1>
+		</div>
+		<div role="main" class="ui-content" data-role="content"> 
+
+		</div>
+	</div>
+	<div data-role="page" id="dados">
+		<div data-role="header" data-position="fixed">
+			<a href="#home" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-home ui-nodisc-icon ui-alt-icon ui-btn-left" data-icon="home">Menu</a>
+			<h1>Dados</h1>
+		</div>
+		<div role="main" class="ui-content" data-role="content"> 
+
+		</div>
+	</div>
+	<div data-role="page" id="jugadores">
+		<div data-role="header" data-position="fixed">
+			<a href="#home" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-home ui-nodisc-icon ui-alt-icon ui-btn-left" data-icon="home">Menu</a>
+			<h1>Jugadores</h1>
+		</div>
+		<div role="main" class="ui-content" data-role="content"> 
+
+		</div>
+	</div>
+</body>
+</html>
