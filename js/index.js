@@ -12,7 +12,8 @@
     		$.shuffle($resultArray);
     		$nb = 1;
     		$.each($resultArray, function($arrkey, $resultColor){
-    			$list += '<li><img src="'+$resultColor+'.png" class="ui-li-icon"></li>';
+    			var $sufix = $nb === 1 ? 'st' : ($nb === 2 ? 'nd' : 'th');
+    			$list += '<li class="ui-li-has-thumb ui-last-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#"><img src="'+$resultColor+'.png" class="ui-li-icon"><h3>'+$resultColor+' <b>'+$nb+'</b>'+$sufix+'</h3></a></li>';
     			$nb++;
     		});
     		$("#form").hide();
@@ -24,6 +25,12 @@
     		$("#ulresult").empty();
     		$("#result").hide();
     		$("#form").show();
+    	});
+
+    	$("#reset").click(function(){
+    		$.each($("#color"), function($key, $value){
+    			$value.reset();
+    		});
     	});
 
     }); 
