@@ -1,4 +1,5 @@
     $(document).ready(function() {
+
     	$(document).on('click', '#submit', function() {
     		var $submitedColors = $('#color').serialize();
     		var $colors = $submitedColors.split("&");
@@ -33,6 +34,36 @@
     		});
     	});
 
+    	$("#submitplayer").click(function(){
+    		var $fullname = "";
+    		var $nickname = "";
+    		var $email = "";
+    		var $color = "";
+    		$addnewplayerform = $("#addnewplayer").serializeArray();
+    		$.each($addnewplayerform, function($playerKey, $playerValue){
+    			$.each($playerValue, function($key, $value) {
+    				switch($value) {
+    					case "fullname":
+    						$fkey = $key + 1;
+    						$fullname = $playerValue["value"];
+    						break;
+    					case "nickname":
+    						$nickname = $playerValue["value"];
+    						break;
+    					case"email":
+    						$email = $playerValue["value"];
+    						break;
+						case"color-1":
+    						$color = $playerValue["value"];
+    						break;
+    					default:
+    						break;
+    				}
+    			});
+    		});
+
+    		alert("Fullname:" + $fullname+" Nickname:" + $nickname + " Email "+ $email+ " Color "+$color);
+    	});
     }); 
 
     (function($){
