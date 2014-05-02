@@ -87,9 +87,67 @@
 		<div data-role="header" data-position="fixed">
 			<a href="#home" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-home ui-nodisc-icon ui-alt-icon ui-btn-left" data-icon="home">Menu</a>
 			<h1>Jugadores</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#addjugador" data-icon="plus">A&ntilde;adir Jugador</a></li>
+					<li><a href="#addlist" data-icon="plus">Crear nueva lista</a></li>
+				</ul>
+			</div>
 		</div>
 		<div role="main" class="ui-content" data-role="content"> 
-
+			<form method="post" id="addnewplayer">
+				<div class="ui-field-contain">
+					<input type="text" name="fullname" id="fullname" placeholder="Fullname">
+					<input type="text" name="nickname" id="nickname" placeholder="Nickname">
+					<input type="email" name="email" id="email" placeholder="Email">
+					<input type="color" data-clear-btn="false" name="color-1" id="color-1" value="#BF5642">
+				</div>
+				<input type="button" data-theme="b" name="submitplayer" id="submitplayer" value="Submit">
+			</form>
+		</div>
+	</div>
+	<div data-role="page" id="addjugador">
+		<div data-role="header" data-position="fixed">
+			<a href="#home" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-home ui-nodisc-icon ui-alt-icon ui-btn-left" data-icon="home">Menu</a>
+			<h1>Jugadores</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#jugadores" data-icon="bullets">Listas</a></li>
+					<li><a href="#addlist" data-icon="plus">Crear nueva lista</a></li>
+				</ul>
+			</div>
+		</div>
+		<div role="main" class="ui-content" data-role="content"> 
+			<ul data-role="listview"> 
+				<li><a href="#">Default is right arrow</a></li>
+				<li data-icon="plus"><a href="#">data-icon="plus"</a></li>
+				<li data-icon="minus"><a href="#">data-icon="minus"</a></li>
+				<li data-icon="delete"><a href="#">data-icon="delete"</a></li>
+				<li data-icon="location"><a href="#">data-icon="location"</a></li> 
+				<li data-icon="false"><a href="#">data-icon="false"</a></li>
+			</ul>
+		</div>
+	</div>
+	<div data-role="page" id="addlist">
+		<div data-role="header" data-position="fixed">
+			<a href="#home" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-home ui-nodisc-icon ui-alt-icon ui-btn-left" data-icon="home">Menu</a>
+			<h1>Jugadores</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#jugadores" data-icon="bullets">Listas</a></li>
+					<li><a href="#addjugador" data-icon="plus">A&ntilde;adir jugador</a></li>
+				</ul>
+			</div>
+		</div>
+		<div role="main" class="ui-content" data-role="content"> 
+			<ul data-role="listview"> 
+				<li><a href="#">Default is right arrow</a></li>
+				<li data-icon="plus"><a href="#">data-icon="plus"</a></li>
+				<li data-icon="minus"><a href="#">data-icon="minus"</a></li>
+				<li data-icon="delete"><a href="#">data-icon="delete"</a></li>
+				<li data-icon="location"><a href="#">data-icon="location"</a></li> 
+				<li data-icon="false"><a href="#">data-icon="false"</a></li>
+			</ul>
 		</div>
 	</div>
 </body>
